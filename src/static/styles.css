@@ -74,6 +74,94 @@ section h3 {
   margin-bottom: 8px;
 }
 
+.participants-section {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.participants-section h5 {
+  margin-bottom: 10px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.participants-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  background: #e8f0fe;
+  color: #1a3c8b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.participant-item.empty {
+  background: #f3f4f6;
+  color: #666;
+}
+
+.participant-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4f8ef7;
+  display: inline-block;
+}
+
+.remove-participant-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  margin-left: 4px;
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #a12622;
+  cursor: pointer;
+}
+
+.remove-participant-button:hover,
+.remove-participant-button:focus-visible {
+  background: #ffebee;
+  color: #7f1d1d;
+}
+
+.remove-participant-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.remove-participant-button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -106,6 +194,66 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+dialog {
+  width: min(420px, calc(100% - 32px));
+  margin: auto;
+  padding: 24px;
+  border: 0;
+  border-radius: 12px;
+  color: #333;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+dialog h2 {
+  margin-bottom: 10px;
+  color: #1a237e;
+  font-size: 1.25rem;
+}
+
+dialog p {
+  line-height: 1.5;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.dialog-actions button {
+  padding: 9px 12px;
+}
+
+.dialog-actions .dialog-cancel-button {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #334155;
+}
+
+.dialog-actions .dialog-cancel-button:hover {
+  background: #f1f5f9;
+}
+
+.dialog-actions .dialog-confirm-button {
+  background: #a12622;
+}
+
+.dialog-actions .dialog-confirm-button:hover {
+  background: #7f1d1d;
+}
+
+.dialog-actions button:disabled {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 .message {
